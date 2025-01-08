@@ -1,0 +1,50 @@
+﻿ASELSAN RSI DEĞERLER :
+70-75 RSI değerlerinin sayısı: 180
+75-80 çıkan RSI değerlerinin sayısı: 164
+80-85 çıkan RSI değerlerinin sayısı: 44
+85-90 çıkan RSI değerlerinin sayısı: 35
+26 ile 30 arasında olan RSI değerlerinin sayısı: 60
+21 ile 25 arasında olan RSI değerlerinin sayısı: 37
+15 ile 20 arasında olan RSI değerlerinin sayısı: 20
+10 ile 14 arasında olan RSI değerlerinin sayısı: 8
+
+85-90 RSI ARASI %100 SATIŞ
+80-85 RSI ARASI %80 SATIŞ
+75-80 RSI ARASI %60 SATIŞ
+70-75 RSI ARASI %50 SATIŞ
+
+26-30 RSI ARASI %50 AlIM
+21-25 RSI ARASI %60 AlIM
+15-20 RSI ARASI %80 AlIM
+10-14 RSI ARASI %100 AlIM
+
+
+***** KOD *****
+# RSI değerlerinin 70'in üzerine çıktığı veri sayısı
+# RSI değerlerinin 70 ile 75 arasında olduğu veri sayısı
+count_between_70_and_75 = asel_data[(asel_data["RSI"] >= 70) & (asel_data["RSI"] < 75)].shape[0]
+
+# RSI değerlerinin 75 ile 80 arasında olduğu veri sayısı
+count_between_75_and_80 = asel_data[(asel_data["RSI"] >= 75) & (asel_data["RSI"] < 80)].shape[0]
+
+# RSI değerlerinin 85 ile 90 arasında olduğu veri sayısı
+count_between_85_and_90 = asel_data[(asel_data["RSI"] >= 85) & (asel_data["RSI"] < 90)].shape[0]
+
+# RSI değerlerinin 90 ile 95 arasında olduğu veri sayısı
+count_between_90_and_95 = asel_data[(asel_data["RSI"] >= 90) & (asel_data["RSI"] < 95)].shape[0]
+
+
+# RSI değerlerinin 25 ile 30 arasında olduğu veri sayısı
+count_between_26_and_30 = asel_data[(asel_data["RSI"] >= 26) & (asel_data["RSI"] <= 30)].shape[0]
+count_between_21_and_25 = asel_data[(asel_data["RSI"] >= 21) & (asel_data["RSI"] <= 25)].shape[0]
+count_between_15_and_20 = asel_data[(asel_data["RSI"] >= 15) & (asel_data["RSI"] <= 20)].shape[0]
+count_between_10_and_14 = asel_data[(asel_data["RSI"] >= 10) & (asel_data["RSI"] <= 14)].shape[0]
+
+print(f"70-75 RSI değerlerinin sayısı: {count_between_70_and_75}")
+print(f"75-80 çıkan RSI değerlerinin sayısı: {count_between_75_and_80}")
+print(f"80-85 çıkan RSI değerlerinin sayısı: {count_between_85_and_90}")
+print(f"85-90 çıkan RSI değerlerinin sayısı: {count_between_90_and_95}")
+
+print(f"25 ile 30 arasında olan RSI değerlerinin sayısı: {count_between_26_and_30}")
+print(f"25 ile 30 arasında olan RSI değerlerinin sayısı: {count_between_21_and_25}")
+print(f"25 ile 30 arasında olan RSI değerlerinin sayısı: {count_between_15_and_20}")
